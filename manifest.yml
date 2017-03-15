@@ -2,7 +2,7 @@
 language: nodejs
 default_versions:
 - name: node
-  version: 4.7.0
+  version: 0.10.48
 exclude_files:
 - ".git/"
 - ".gitignore"
@@ -18,6 +18,12 @@ url_to_dependency_map:
   name: node
   version: "$1"
 dependencies:
+- name: node
+  version: 0.10.48
+  uri: https://buildpacks.cloudfoundry.org/concourse-binaries/node/node-0.10.48-linux-x64.tgz
+  md5: 4293e997d61b8801746efed7bc40ea96
+  cf_stacks:
+  - cflinuxfs2
 - name: node
   version: 0.12.16
   uri: https://buildpacks.cloudfoundry.org/dependencies/node/node-0.12.16-linux-x64.tgz
