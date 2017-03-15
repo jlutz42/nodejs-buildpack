@@ -81,11 +81,11 @@ install_npm() {
         download_failed $1
       fi
     fi
-    if [[ `npm --version` == "$version" ]]; then
+#    if [[ `npm --version` == "$version" ]]; then
       echo "npm `npm --version` already installed with node"
-    else
-      echo "Downloading and installing npm $version (replacing version `npm --version`)..."
-      npm install --unsafe-perm --quiet -g npm@$version 2>&1 >/dev/null || download_failed $version
-    fi
+#    else
+#      echo "Downloading and installing npm $version (replacing version `npm --version`)..."
+#      npm install --unsafe-perm --quiet -g npm@$version 2>&1 >/dev/null || download_failed $version
+#    fi
   fi
 }
